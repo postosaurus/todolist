@@ -1,0 +1,58 @@
+h1, h2, .content, .typing, .links {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  width: 100%; }
+
+a:hover, ul li:hover {
+  opacity: 50%;
+  background-color: green;
+  color: white; }
+
+body {
+  background-color: lightgreen;
+  display: flex;
+  flex-flow: wrap;
+  width: 95%; }
+
+h1, h2 {
+  width: 100%; }
+
+h3 {
+  text-align: left; }
+
+.error-message {
+  background-color: red;
+  border: 2px dotted black; }
+
+.content {
+  width: 70%; }
+
+.typing {
+  width: 20%; }
+
+.links {
+  margin: auto;
+  padding: 5px; }
+
+a {
+  margin: 20px;
+  text-decoration: none;
+  color: green; }
+
+a::before {
+  content: "[ "; }
+
+a::after {
+  content: " ]"; }
+
+ul {
+  list-style: none; }
+  ul li {
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    border: 1px dashed green; }
+
+/*# sourceMappingURL=main.css.map */

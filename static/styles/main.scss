@@ -1,0 +1,85 @@
+%block {
+    background-color: lightgreen;
+    // border: 2px dotted green;
+    padding: 10px;
+    margin:  5px;
+    text-align: center;
+    width: 100%;
+}
+
+%hover {
+    opacity: 50%;
+    background-color: green;
+    color: white
+}
+
+body {
+    background-color: lightgreen;
+    display: flex;
+    flex-flow: wrap;
+    width: 95%;
+}
+
+h1, h2 {
+    @extend %block;
+    width: 100%
+}
+h3 {
+    text-align: left;
+}
+.error-message {
+    background-color: red;
+    border:  2px dotted black;
+}
+
+.content {
+    @extend %block;
+    width: 70%;
+}
+
+.typing {
+    @extend %block;
+    width: 20%;
+
+
+}
+
+.links {
+    @extend %block;
+    margin: auto;
+    padding: 5px;
+}
+
+
+a {
+    margin: 20px;
+    text-decoration: none;
+    color: green;
+}
+
+a::before {
+    content: "[ ";
+}
+
+a::after {
+    content: " ]";
+}
+
+a:hover {
+    @extend  %hover;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        text-align: left;
+        padding: 5px;
+        margin: 10px;
+        border: 1px dashed green;
+    }
+
+    li:hover {
+        @extend %hover;
+    }
+}

@@ -1,0 +1,30 @@
+{% extends "layout.html"  %}
+
+{% block  heading %}
+I am taking your notes
+{% endblock %}
+
+{% block  body %}
+    <div class="typing" id="typing">
+
+
+        <form action="{{  url_for('index')}}" method="post">
+            <input autofocus type="text" name="note" placeholder="Type in your note">
+            <button>Store</button>
+            <p>
+                <a href="{{ url_for('delete') }}">Delete Session</a>
+            </p>
+        </form>
+    </div>
+
+    <div class="content">
+        <h3>Your notes:</h3>
+        <ul>
+            {% for note in notes %}
+            {% if note %}
+            <li>{{ note }}</li>
+            {% endif  %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
