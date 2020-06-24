@@ -8,6 +8,8 @@
     <body>
         <h1 id="top">{% block heading %}{%  endblock %}</h1>
         {% if delete %}
+            <h2 class="error-message">Note deleted</h2>
+        {% elif restart %}
             <h2 class="error-message">Session restarted</h2>
         {% else %}
             <h2 class="message">&nbsp;</h2>

@@ -6,9 +6,8 @@ h1, h2, .content, .typing, .links {
   width: 100%; }
 
 a:hover, ul li:hover {
-  opacity: 50%;
-  background-color: green;
-  color: white; }
+  opacity: 75%;
+  background-color: green; }
 
 body {
   background-color: lightgreen;
@@ -27,7 +26,11 @@ h3 {
   border: 2px dotted black; }
 
 .content {
-  width: 70%; }
+  width: 70%;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
+  .content a {
+    color: red; }
 
 .typing {
   width: 20%; }
@@ -50,9 +53,29 @@ a::after {
 ul {
   list-style: none; }
   ul li {
+    background-color: green;
     text-align: left;
     padding: 5px;
     margin: 10px;
-    border: 1px dashed green; }
+    border: 1px dashed green;
+    display: flex;
+    flex-flow: column; }
+  ul li:hover a {
+    color: white; }
+
+textarea {
+  border: 2px dotted green;
+  resize: none;
+  width: 100%;
+  padding: 5px; }
+
+.note-header {
+  background-color: lighblue;
+  margin: 10px; }
+
+.note-content {
+  white-space: pre-wrap;
+  border: 1px dotted green;
+  background-color: lightgreen; }
 
 /*# sourceMappingURL=main.css.map */

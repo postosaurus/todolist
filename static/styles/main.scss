@@ -8,9 +8,9 @@
 }
 
 %hover {
-    opacity: 50%;
+    opacity: 75%;
     background-color: green;
-    color: white
+    // color: white
 }
 
 body {
@@ -35,19 +35,24 @@ h3 {
 .content {
     @extend %block;
     width: 70%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    a {
+        color: red;
+    }
 }
 
 .typing {
     @extend %block;
     width: 20%;
-
-
 }
 
 .links {
     @extend %block;
     margin: auto;
     padding: 5px;
+
 }
 
 
@@ -73,13 +78,39 @@ ul {
     list-style: none;
 
     li {
+        background-color: green;
         text-align: left;
         padding: 5px;
         margin: 10px;
         border: 1px dashed green;
+        display: flex;
+        flex-flow: column;
     }
 
     li:hover {
         @extend %hover;
+
+        a {
+            color: white;
+        }
     }
+}
+
+
+textarea  {
+    border: 2px dotted green;
+    resize: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.note-header {
+    background-color: lighblue;
+    margin: 10px;
+}
+
+.note-content  {
+    white-space: pre-wrap;
+    border: 1px dotted green;
+    background-color: lightgreen;
 }
